@@ -41,3 +41,49 @@ Tasks to Address the Issue:
 
 
 In conclusion, the recent outage was caused by a surge in user traffic that overwhelmed the database connections, leading to slow query performance. The swift response of the teams involved in diagnosing and resolving the issue prevented extended downtime. Moving forward, the company will focus on enhancing monitoring, scaling strategies, and proactive load testing to ensure the system's resilience during peak usage periods. This incident serves as a valuable learning opportunity to fortify the application's infrastructure and response capabilities.
+
+Updated Post Mortem, To include a little humor of course :) :
+
+Outage Post-Mortem: A Not-So-Smooth Sailing Adventure
+
+Ahoy there, tech sailors! Strap on your life jackets and grab your debug compasses, because we're about to set sail on a voyage through the stormy seas of web stack troubleshooting. Our ship, the USS Codebreaker, recently encountered a tempestuous outage that left our users feeling as lost as a byte in a data ocean. But fear not, for our tale ends with a triumphant return to calm waters!
+
+Issue Summary:
+
+Outage Duration: August 10, 2023, 15:30 - August 10, 2023, 16:45 (UTC)
+Impact: Web Application Service (70% of users left adrift)
+
+The Stormy Seas:
+
+Picture this: our trusty monitoring parrot started squawking louder than a ship's horn during a foggy night. Engineers, with puzzled expressions akin to sailors spotting a mermaid, scrambled to decipher the issue. User reports flooded in, much like a cannonball barrage, complaining about sluggish page loads. We knew we were in for a high-seas adventure.
+
+A Misguided Expedition:
+
+As brave captains, we first scoured the logs for clues, like treasure hunters seeking gold doubloons. We even examined the load balancer metrics with intensity comparable to a pirate hunting for buried loot. Alas, our hunch about slow database queries seemed as accurate as a map marked by an intoxicated cartographer.
+
+Escalation Ahoy:
+
+With the storm showing no signs of letting up, we raised the distress signal to the DevOps team. They arrived like reinforcements in the heat of battle, armed with debugging trinkets and monitoring charms. We delved deep into the database abyss, convinced that hidden krakens (read: queries) were to blame.
+
+The Bright Lighthouse:
+
+Suddenly, like a lighthouse guiding a lost ship, the Database Administrators arrived with wisdom as ancient as Davy Jones' locker. It was revealed that our database connections were clogged tighter than a bottle of rum in a pirate's den. Slow queries were stirring the waters, creating a perfect storm for disaster.
+
+Charting a Course to Calm Waters:
+
+After a quick round of 'Eureka!' and celebratory sea shanties, we embarked on a swift course correction. Our fearless Database Administrators optimized the queries, setting them on a course as smooth as a dolphin's glide. Meanwhile, the connection pool was revamped to handle surges like a seasoned sailor maneuvering through a squall.
+
+Post-Storm Reflection:
+
+As the waves settled and our ship found steady ground, we pondered the lessons learned on this treacherous voyage. We resolved to fortify our defenses with:
+
+Cache Hoarding: Implement caching to store precious loot (data) and reduce visits to the database shores.
+Watchtower Vigilance: Set up watchtowers with more eagle-eyed alerts to spot incoming storms before they hit.
+Scalable Cannons: Create scripts to auto-scale resources as needed, so we're always prepared for the worst.
+Navigational Tasks Ahead:
+
+Query Mariner: Implement query monitoring tools to keep a weather eye on those sneaky slow queries.
+The Automated Helm: Develop scripts to navigate the treacherous waters of automatic resource scaling.
+Index Cartography: Review and update indexing strategies to ensure efficient data retrieval.
+Logbook Chronicles: Document our journey, from the storm's first rumble to the triumphant return to calm seas.
+So, fellow sailors, remember this tale of triumph amidst turbulent tides. Our USS Codebreaker sails stronger, better equipped to weather the fiercest storms. And as we move forward, let's do so with a hearty laugh and a steadfast resolve to keep our ship seaworthy and our code shipshape! Anchors aweigh, my tech companions! 
